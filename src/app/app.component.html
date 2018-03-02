@@ -1,19 +1,6 @@
 <app-header></app-header>
+<app-login></app-login>
 <div class="flex-container center">
   <h1>I'm working!</h1>
 </div>
 
-<mat-card>
-  <mat-form-field>
-    <input matInput [(ngModel)]="answer" placeholder="whaat">
-  </mat-form-field>
-
-  <br>
-
-  <button mat-raised-button (click) = "showAnswer()">Answer me</button>
-  <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
-</mat-card>
-
-<mat-card *ngIf="answerDisplay">
-  <h1>{{ answerDisplay }}, you're damn right!</h1>
-</mat-card>
