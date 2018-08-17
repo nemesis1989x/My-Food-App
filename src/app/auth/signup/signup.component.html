@@ -1,0 +1,19 @@
+<mat-card>
+  <div class="form-container">
+    <form (ngSubmit)="onSignUp(form1)" #form1="ngForm">
+      <i class="material-icons md-dark">email</i>
+      <mat-form-field>
+        <label for="email"></label>
+        <input matInput id="email" type="email" name="email" placeholder="Enter your email">
+      </mat-form-field>
+      <i class="material-icons md-dark">lock</i>
+      <mat-form-field>
+        <input matInput id="password" type="password" name="password" placeholder="Enter a password">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="row">
+    <button mat-raised-button type="submit">SIGN UP</button>
+  </div>
+
+</mat-card>

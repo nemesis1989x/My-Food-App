@@ -1,2 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+  height: 100%;
+  width:100%;
+  font-size: 14px;
+  font-family: Roboto;
+  background: url("../assets/images/login-screen-blurry.png") no-repeat center;
+  background-size: cover;
+  //background-clip: content-box;
+}
+
+body {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.row {
+  flex-flow: row wrap;
+}
+.col {
+  flex-flow: column wrap;
+}

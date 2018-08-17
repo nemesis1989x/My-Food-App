@@ -1,18 +1,16 @@
 $gutter: 20px
 
+.content
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+
 .flex-container,
 .flex-item
-  padding: $gutter / 2
-
-.center
-  text-align: center
-
-.flex
   display: flex
-  box-sizing: border-box
+  padding: $gutter/2
+  flex: 1
+  justify-content: center
+  align-items: center
 
-.row
-  flex-flow: row wrap
-
-.col
-  flex-flow: column wrap

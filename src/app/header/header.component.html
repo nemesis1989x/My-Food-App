@@ -1,11 +1,15 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Toolbar</span>
+    <span>{{appNameTemp ? appNameTemp : 'notFound'}}</span>
 
     <span class="example-spacer"></span>
 
-    <button mat-button>About</button>
-    <button mat-button>Services</button>
-    <button mat-button>Contact</button>
+    <ul>
+      <li><a class="" routerLink="/signin">Login</a></li>
+      <li><a class="" routerLink="/signup">Register</a></li>
+    </ul>
+    <!--<button mat-button><a class="" routerLink="/signup">Register</a></button>-->
+    <!--<button mat-button>Services</button>-->
+    <!--<button mat-button>Contact</button>-->
   </mat-toolbar-row>
 </mat-toolbar>
