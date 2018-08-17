@@ -1,25 +1,19 @@
 <mat-card>
   <div class="form-container">
-    <form (ngSubmit)="onSignUp(form1)" #form1="ngForm">
-      <i class="material-icons md-dark">account_circle</i>
+    <form (ngSubmit)="onSignin(form1)" #form1="ngForm">
+      <i class="material-icons md-dark">email</i>
       <mat-form-field>
-        <input matInput [(ngModel)]="enteredUsername" id="user" type="text" name="user" placeholder="Username">
+        <label for="email"></label>
+        <input matInput type="email" id="email" name="email" ngModel placeholder="Enter your email">
       </mat-form-field>
       <i class="material-icons md-dark">lock</i>
       <mat-form-field>
-      <input matInput [(ngModel)]="enteredPassword" id="password" type="password" name="password" placeholder="Password">
+        <input matInput id="password" type="password" name="password" ngModel placeholder="Enter a password">
       </mat-form-field>
+      <div class="row">
+        <mat-spinner [diameter]="35" [style.display]="showSpinner ? 'flex' : 'none'"></mat-spinner>
+        <button mat-raised-button color="accent" type="submit" [disabled]="!form1.valid">SIGN IN</button>
+      </div>
     </form>
   </div>
-  <br>
-  <div class="row">
-    <mat-spinner [diameter]="35" [style.display]="showSpinner ? 'flex' : 'none'"></mat-spinner>
-    <button mat-raised-button (click) = "validateUser()">LOGIN</button>
-  </div>
-
-  <h1 *ngIf="greetUser; else error">Hello {{ username }}, welcome to Fooderoo!</h1> <!-- Here we want to goto(#home) -->
-
-  <ng-template #error>
-    <h1>{{ wrongInput }}</h1>
-  </ng-template>
 </mat-card>

@@ -4,16 +4,15 @@
       <i class="material-icons md-dark">email</i>
       <mat-form-field>
         <label for="email"></label>
-        <input matInput id="email" type="email" name="email" placeholder="Enter your email">
+        <input matInput type="email" id="email" name="email" ngModel placeholder="Enter your email">
       </mat-form-field>
       <i class="material-icons md-dark">lock</i>
       <mat-form-field>
-        <input matInput id="password" type="password" name="password" placeholder="Enter a password">
+        <input matInput id="password" type="password" name="password" ngModel placeholder="Enter a password">
       </mat-form-field>
+      <div class="row">
+        <button mat-raised-button color="accent" type="submit" [disabled]="!form1.valid">SIGN UP</button>
+      </div>
     </form>
   </div>
-  <div class="row">
-    <button mat-raised-button type="submit">SIGN UP</button>
-  </div>
-
 </mat-card>

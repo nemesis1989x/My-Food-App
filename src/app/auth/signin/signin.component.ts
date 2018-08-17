@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-signin',
@@ -17,23 +19,20 @@ export class SigninComponent implements OnInit {
   private password = 'mypass';
   public username = 'myuser';
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  validateUser() {
-
+  onSignin(form: NgForm) {
+    const email = form.value.email;
+    const password = form.value.password;
     this.showSpinner = true;
 
     setTimeout(() => {
-      if (this.enteredUsername === this.username && this.enteredPassword === this.password){
-        this.greetUser = this.enteredUsername;
-        this.showSpinner = false;
-      } else {
-        this.showSpinner = false;
-        this.wrongInput = 'Wrong Input!';
-      }
+      this.showSpinner = false;
+      this.authService.signinUser(email, password);
+
     }, 2000);
   }
 }
